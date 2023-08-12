@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ExchangeRateWeather</string>
+
+    <string name="invalid_username">Not a valid username</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="welcome">"Welcome!"</string>
+    <string name="username">"Please write your username to Login"</string>
+    <string name="login">LOGIN</string>
+    <string name="logo">logo</string>
+    <string name="Username">username</string>
+    <string name="currency_exchange">Exchange rate for today</string>
+    <string name="purchase">Purchase</string>
+    <string name="sale">Sale</string>
+    <string name="weatherInformation">Current weather information</string>
+</resources>
