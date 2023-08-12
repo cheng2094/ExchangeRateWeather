@@ -4,5 +4,8 @@
  <dimen name="fragment_vertical_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="LRMargin">30dp</dimen>
+    <dimen name="LRPadding">30dp</dimen>
+    <dimen name="TBMargin">15dp</dimen>
     <dimen name="detailFont">18sp</dimen>
+    <dimen name="itemPadding">15dp</dimen>
 </resources>

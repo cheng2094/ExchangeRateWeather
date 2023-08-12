@@ -13,4 +13,9 @@
     <string name="purchase">Purchase</string>
     <string name="sale">Sale</string>
     <string name="weatherInformation">Current weather information</string>
+    <string name="currrentTemp">Current temperature</string>
+    <string name="condition">Condition</string>
+    <string name="region">Region</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
 </resources>
