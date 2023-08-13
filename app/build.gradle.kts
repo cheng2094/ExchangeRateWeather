@@ -97,4 +97,7 @@ dependencies {
     //Swipe refresh
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
+    // required to avoid crash on Android 12 API 31
+    implementation("androidx.work:work-runtime-ktx:2.7.0")
+
 }

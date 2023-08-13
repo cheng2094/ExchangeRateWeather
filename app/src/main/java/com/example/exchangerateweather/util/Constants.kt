@@ -1,6 +1,10 @@
 package com.cursosandroidant.weather.common.utils
 
 object Constants {
+    val CHANNEL_ID = "channelID"
+    val CHANNEL_NAME = "channelName"
+    val NOTIF_ID = 0
+
     const val BASE_URL = "https://api.openweathermap.org/"
     const val WEATHER_PATH = "data/2.5/weather"
 
