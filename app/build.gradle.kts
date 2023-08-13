@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -65,10 +66,16 @@ dependencies {
 
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
     //LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
 
     // Kotlin-Activity
     implementation("androidx.activity:activity-ktx:$activityVersion")
@@ -77,18 +84,16 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
+    //For xml retrofit
+    implementation("com.squareup.retrofit2:converter-simplexml:2.9.0"){
+        exclude(module = "stax")
+        exclude(module = "stax-api")
+        exclude(module = "xpp3")
+    }
+
     // Kotlin-navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-
-    // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
-
-    // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
-
-    // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:$navVersion")
 
     //Glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
@@ -99,5 +104,8 @@ dependencies {
 
     // required to avoid crash on Android 12 API 31
     implementation("androidx.work:work-runtime-ktx:2.7.0")
+}
 
+kapt {
+    correctErrorTypes = true
 }

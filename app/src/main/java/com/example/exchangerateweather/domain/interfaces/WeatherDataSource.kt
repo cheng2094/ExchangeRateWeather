@@ -4,5 +4,5 @@ import com.example.exchangerateweather.domain.models.WeatherResponse
 
 interface WeatherDataSource {
 
-    fun getWeather(lat: Double, lon: Double, appid: Long): WeatherResponse
+    suspend fun getWeather(lat: Double, lon: Double, appid: String): WeatherResponse
 }

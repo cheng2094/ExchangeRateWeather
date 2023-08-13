@@ -301,6 +301,18 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tvDataError"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/error_text"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <ProgressBar
             android:id="@+id/loadingView"
             android:layout_width="wrap_content"
