@@ -49,15 +49,16 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lnTitle">
+        app:layout_constraintTop_toBottomOf="@id/lnTitle"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
 
         <TextView
             android:id="@+id/lblUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/username"
+            android:text="@string/write_username"
             android:textAlignment="viewStart"
-            android:textColor="#4E4E4E"
+            android:textColor="@color/light_grey"
             android:textSize="12sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,20 +69,20 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:textColorHint="#A7A7A7"
-            app:boxStrokeColor="#EAEAEE"
+            android:textColorHint="@color/light_grey"
+            app:boxStrokeColor="#3ba8be"
+            app:hintTextColor="@color/turquoise"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/lblUsername">
-            />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputUsername"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:textColor="#5B5B5B"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_grey"
                 android:textSize="15sp"
+                android:hint="@string/Username"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -93,9 +94,10 @@
             android:layout_marginTop="50dp"
             android:text="@string/login"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:background="@drawable/bg_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>

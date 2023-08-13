@@ -23,22 +23,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/lblUsername"
+        <LinearLayout
+            android:id="@+id/lyTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Username"
-            android:textAlignment="center"
-            android:textColor="#4E4E4E"
-            android:textSize="32sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Username"
+                android:textAlignment="viewStart"
+                android:textColor="#4E4E4E"
+                android:textSize="32sp"
+                android:textStyle="normal|bold"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/LRMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Logout"
+                android:gravity="end"
+                android:textColor="@color/turquoise"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_marginEnd="@dimen/LRMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
 
 
         <LinearLayout
+            android:id="@+id/lyform"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="@dimen/LRMargin"
@@ -52,7 +80,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lblUsername"
+            app:layout_constraintTop_toBottomOf="@+id/lyTitle"
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
