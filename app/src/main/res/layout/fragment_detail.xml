@@ -111,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="600.00"
+                    android:text="@string/exchangeSample"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>
@@ -135,7 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="500.00"
+                    android:text="@string/exchangeSample"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>
@@ -177,7 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="24 C"
+                    android:text="@string/temperatureSample"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>
@@ -193,6 +193,7 @@
                     android:id="@+id/lblCondition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="@string/condition"
                     android:textSize="@dimen/detailFont" />
 
@@ -205,15 +206,16 @@
                         android:id="@+id/imgCondition"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_gravity="end"
-                        android:src="@drawable/ic_launcher_foreground" />
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:contentDescription="@string/condition" />
 
                     <TextView
                         android:id="@+id/tvCondition"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:text="Cloudy"
+                        android:gravity="center"
+                        android:text="@string/cloudy"
                         android:textColor="@color/light_grey"
                         android:textSize="@dimen/detailFont" />
                 </LinearLayout>
@@ -238,7 +240,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="CR"
+                    android:text="@string/cr"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>
@@ -271,7 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="5:00am"
+                    android:text="@string/timeExample"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>
@@ -295,7 +297,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:text="6:00pm"
+                    android:text="@string/timeExample"
                     android:textColor="@color/light_grey"
                     android:textSize="@dimen/detailFont" />
             </LinearLayout>

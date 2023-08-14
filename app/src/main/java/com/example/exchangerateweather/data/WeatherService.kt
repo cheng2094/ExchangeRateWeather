@@ -6,6 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherService {
+
+    //Send latitud, lontitud, and appId as parameters
     @GET(Constants.WEATHER_PATH)
     suspend fun getWeather(
         @Query(Constants.LATITUDE_PARAM) lat: Double,

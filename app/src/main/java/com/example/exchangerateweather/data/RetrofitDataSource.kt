@@ -8,8 +8,10 @@ import javax.inject.Inject
 
 
 class RetrofitDataSource @Inject constructor(val api: WeatherService) : WeatherDataSource{
-    override suspend fun getWeather(lat: Double, lon: Double, appId: String): WeatherResponse =
+
+    //Implementation of getWeather
+    override suspend fun getWeather(lat: Double, lon: Double, appid: String): WeatherResponse =
         withContext(Dispatchers.IO) {
-            api.getWeather(lat, lon, appId)
+            api.getWeather(lat, lon, appid)
         }
 }
