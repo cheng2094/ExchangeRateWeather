@@ -3,6 +3,7 @@ package com.example.exchangerateweather.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.exchangerateweather.data.ExchangeServiceSoap
 import com.example.exchangerateweather.data.RetrofitDataSource
 import com.example.exchangerateweather.domain.models.WeatherResponse
 import com.example.exchangerateweather.domain.usecases.GetWeatherUseCase
@@ -22,6 +23,8 @@ class DetailViewModel @Inject constructor(
     val weather = MutableLiveData<WeatherResponse>()
     val dataLoadError = MutableLiveData<Boolean>()
     val loading = MutableLiveData<Boolean>()
+    //val purchase = MutableLiveData<ExchangeResponse>()
+    val sale = MutableLiveData<Int>()
 
     fun refresh(lat: Double, lon: Double, appId: String){
         getWeather(lat, lon, appId)
@@ -37,5 +40,10 @@ class DetailViewModel @Inject constructor(
             } finally {
             }
         }
+    }
+
+    private fun getExchange(){
+        val exchangeServiceSoap = ExchangeServiceSoap()
+        val result = exchangeServiceSoap.getExchange("Parameter value")
     }
 }

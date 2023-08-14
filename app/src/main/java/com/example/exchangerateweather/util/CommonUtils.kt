@@ -7,6 +7,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.exchangerateweather.R
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.Locale
 
 object CommonUtils {
@@ -37,5 +39,9 @@ object CommonUtils {
 
  fun getHour(epoch: Long): String = getFormatedTime(epoch, "HH:mm")
 
+ fun getDate():String{
+  val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+  return LocalDateTime.now().format(formatter)
+ }
 
 }

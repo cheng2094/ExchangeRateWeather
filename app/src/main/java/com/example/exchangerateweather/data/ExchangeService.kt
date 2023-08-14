@@ -2,6 +2,7 @@ package com.example.exchangerateweather.data
 
 import com.cursosandroidant.weather.common.utils.Constants
 import com.example.exchangerateweather.domain.models.WeatherResponse
+import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query

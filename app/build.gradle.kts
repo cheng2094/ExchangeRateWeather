@@ -104,6 +104,9 @@ dependencies {
 
     // required to avoid crash on Android 12 API 31
     implementation("androidx.work:work-runtime-ktx:2.7.0")
+
+    //To consume  soap service
+    implementation("com.google.code.ksoap2-android:ksoap2-android:3.6.4")
 }
 
 kapt {
